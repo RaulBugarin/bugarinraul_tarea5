@@ -4,10 +4,13 @@ $(document).ready(function(){
         var numero=$("#num").val();
         var mult=$("#mult").val();
 
-        for (i; i< mult; i++) {
-            i*numero}
+        $("#tabla").empty()
 
-            $("#mensajes").append()
+        $("#tabla").append("<th> Tabla de multiplicar del"+numero+"</th>");
+        
+        for (i; i< mult; i++) {
+            $("#tabla").append("<tr><td>" +numero+ "*" +i+ "</td><td>" +i*numero+ "</td></tr>")
+        }
 
 
     });
