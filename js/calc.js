@@ -4,32 +4,17 @@ $(document).ready(function(){
         var numero=$("#num").val();
         var mult=$("#mult").val();
 
-        $("#tabla").empty()
+        if(numero<=9 && numero>=1) {
+            $("#tabla").empty();
 
-        $("#tabla").append("<th> Tabla de multiplicar del"+numero+"</th>");
+            $("#tabla").append("<th> Tabla de multiplicar del "+numero+"</th>");
         
-        for (i; i< mult; i++) {
-            $("#tabla").append("<tr><td>" +numero+ "*" +i+ "</td><td>" +i*numero+ "</td></tr>")
-        }
-
-
+            for (i; i< mult; i++) {
+                $("#tabla").append("<tr><td>" +numero+ "*" +i+ "</td><td>" +i*numero+ "</td></tr>")
+            };
+        } else {
+                $("#tabla").append("Necesitamos un número entre 1 y 9")
+        };
+        
     });
 });
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    /*var nombre = document.getElementById('nombre').value;
-
-    for (var i = i) {
-    $('#tablaMultiplicar tr:last').after('<tr><td>' + nombre + '</td><td>' + (multiplicacio) + '</td>');
-    
-    
-    }
-} */   
